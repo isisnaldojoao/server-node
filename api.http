@@ -1,0 +1,32 @@
+POST http://localhost:3333/events
+Content-Type: application/json
+
+
+{
+    "title":"New event 2",
+    "details":null,
+    "maximumAttendees":1
+}
+
+###
+
+POST http://localhost:3333/events/3209a161-bc67-4103-83de-fa3335d6fdf3/attendees
+Content-Type: application/json
+
+{
+    "name":"João Isisnaldo",
+    "email":"joaoisisnaldo@gmail.com"
+}
+
+###
+
+GET http://localhost:3333/events/3209a161-bc67-4103-83de-fa3335d6fdf3
+
+###
+GET http://localhost:3333/attendees/3/badge
+
+###
+GET http://localhost:3333/attendees/4/check-in
+
+###
+GET http://localhost:3333/events/3209a161-bc67-4103-83de-fa3335d6fdf3/attendees?query=João
